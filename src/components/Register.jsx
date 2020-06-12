@@ -57,9 +57,9 @@ class Registration extends Component {
           Registration Details
         </p>
         <div className="row">
-          <div className="col-8 col-md-5 m-auto shadow bg-black rounded">
+          <div className="col-8 col-md-4 m-auto shadow bg-black rounded">
             <form className="mx-3">
-              <label className="m-2" htmlFor="name">
+              <label className="m-2 mt-3" htmlFor="name">
                 Company Name
               </label>
               <input

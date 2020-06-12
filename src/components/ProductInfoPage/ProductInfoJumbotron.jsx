@@ -21,7 +21,7 @@ export default function ProductInfoJumbotron() {
                 color="4A73C5"
                 style={{ fontSize: "20px", fontFamily: "herculanum" }}
               >
-                Visitor Management System
+                Cloud based - Visitor Management System
               </p>
               <p
                 className="text-left"
