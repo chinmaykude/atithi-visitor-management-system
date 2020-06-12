@@ -1,0 +1,11 @@
+.noMatchHeader {
+  color: #282c34;
+  margin-right: 5%;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: 700;
+}
+
+.noMatchfont {
+  font-family: Tomorrow;
+}
