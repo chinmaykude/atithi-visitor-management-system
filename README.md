@@ -4,9 +4,22 @@
 
 https://atithi-visitor-management-system.now.sh/
 
+### Atithi Landing Page
+![Atithi Landing Page](https://user-images.githubusercontent.com/23414927/84551828-6dc4c600-ad2c-11ea-8158-515373c7cdc3.png)
+
+### Check-in Check-out Main Page
+![Check-in Check-out Main Page](https://user-images.githubusercontent.com/23414927/84552084-3b679880-ad2d-11ea-9b85-28dea5c5712f.png)
+
+### Visit Details Page
+![Visit Details Page](https://user-images.githubusercontent.com/23414927/84552112-5508e000-ad2d-11ea-9c55-373bee90b757.png)
+
+### Admin Dashboard
+![Admin Dashboard](https://user-images.githubusercontent.com/23414927/84552151-6ce06400-ad2d-11ea-9a41-83592fcc4336.png)
 
 
 
+<br />
+<hr />
 
 # React Project Template
 
