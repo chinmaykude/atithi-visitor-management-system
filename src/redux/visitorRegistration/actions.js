@@ -276,7 +276,9 @@ export const checkForExistingVisitor = (email, history) => {
       .then(snapshot => {
         if (snapshot.empty) {
           console.log(snapshot.empty);
-          return;
+          history.push("/email_verification");
+          alert("Please enter correct email id..!!");
+          dispatch(checkForExistingVisitorFailure());
         }
         snapshot.forEach(doc => {
           console.log(doc.id, "=>", doc.data());
@@ -285,7 +287,10 @@ export const checkForExistingVisitor = (email, history) => {
           history.push("/user_visit_details_updated");
         });
       })
-      .catch(() => dispatch(checkForExistingVisitorFailure()));
+      .catch(() => {
+        history.push("/email_verification");
+        dispatch(checkForExistingVisitorFailure());
+      });
   };
 };
 
