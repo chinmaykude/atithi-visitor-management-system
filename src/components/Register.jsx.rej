@@ -1,0 +1,33 @@
+diff a/src/components/Register.jsx b/src/components/Register.jsx	(rejected hunks)
+@@ -125,14 +125,14 @@ class Registration extends Component {
+-                  <button
+-                    className="btn btn-primary col-12 col-md-12 mb-3"
+-                    type="button"
+-                    disabled
+-                  >
+-                    <span
+-                      class="spinner-border"
+-                      role="status"
+-                      aria-hidden="true"
+-                      style={{ width: "1.5rem", height: "1.5rem" }}
+-                    ></span>
+-                    <span class="sr-only">Loading...</span>
+-                  </button>
+-                )}
++                <button
++                  className="btn btn-primary col-12 col-md-12 mb-3"
++                  type="button"
++                  disabled
++                >
++                  <span
++                    class="spinner-border"
++                    role="status"
++                    aria-hidden="true"
++                    style={{ width: "1.5rem", height: "1.5rem" }}
++                  ></span>
++                  <span class="sr-only">Loading...</span>
++                </button>
++              )}
+@@ -148 +148 @@ Registration.defaultProps = {
+-  sendCompanyRegistrationDetail() { },
++  sendCompanyRegistrationDetail() {},

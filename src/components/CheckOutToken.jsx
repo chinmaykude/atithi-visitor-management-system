@@ -33,7 +33,7 @@ class CheckOutToken extends Component {
 
     const { visitID } = this.state;
     console.log("visitID", visitID);
-    const checkout_timestamp = new Date();
+    const checkout_timestamp = Date.now();
     const { checkoutVisitorDestructured, history } = this.props;
     console.log("history", history);
     console.log("checkout_timestamp", checkout_timestamp);
@@ -74,9 +74,6 @@ class CheckOutToken extends Component {
                       Checkout
                     </button>
                   </form>
-                  <Link className="mt-3" to="/main_checkin_checkout">
-                    Main page
-                  </Link>
                 </>
               ) : (
                 <div class="d-flex justify-content-center ">

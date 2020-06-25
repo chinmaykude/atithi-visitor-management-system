@@ -44,7 +44,7 @@ export const loginUser = ({ email, password, history }) => dispatch => {
     })
     .catch(error => {
       // Handle Errors
-      let errorCode = error.code;
+      const errorCode = error.code;
       let errorMessage = "Something went wrong. Please try again.";
       if (errorCode === "auth/wrong-password" || "auth/invalid-email") {
         errorMessage = "Please check the entered credentials.";
@@ -134,5 +134,5 @@ export const logoutUser = () => {
 const setAuthorizationHeader = token => {
   const FBIdToken = `Bearer ${token}`;
   localStorage.setItem("FBIdToken", FBIdToken);
-  axios.defaults.headers.common["Authorization"] = FBIdToken;
+  axios.defaults.headers.common.Authorization = FBIdToken;
 };

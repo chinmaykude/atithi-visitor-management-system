@@ -268,25 +268,24 @@ export const checkForExistingVisitor = (email, history) => {
     if (email.trim() === "") {
       dispatch(checkForExistingVisitorFailure());
       return alert("Email fields cannot be left empty");
-    } else {
-      fBaseVisitorRegister
-        .where("visitorEmail", "==", email)
-        .limit(1)
-        .get()
-        .then(snapshot => {
-          if (snapshot.empty) {
-            console.log(snapshot.empty);
-            return;
-          }
-          snapshot.forEach(doc => {
-            console.log(doc.id, "=>", doc.data());
-            const userDataFromDB = doc.data();
-            dispatch(checkForExistingVisitorSuccess(userDataFromDB));
-            history.push("/user_visit_details_updated");
-          });
-        })
-        .catch(() => dispatch(checkForExistingVisitorFailure()));
     }
+    fBaseVisitorRegister
+      .where("visitorEmail", "==", email)
+      .limit(1)
+      .get()
+      .then(snapshot => {
+        if (snapshot.empty) {
+          console.log(snapshot.empty);
+          return;
+        }
+        snapshot.forEach(doc => {
+          console.log(doc.id, "=>", doc.data());
+          const userDataFromDB = doc.data();
+          dispatch(checkForExistingVisitorSuccess(userDataFromDB));
+          history.push("/user_visit_details_updated");
+        });
+      })
+      .catch(() => dispatch(checkForExistingVisitorFailure()));
   };
 };
 

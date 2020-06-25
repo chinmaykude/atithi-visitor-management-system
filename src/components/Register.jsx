@@ -31,17 +31,20 @@ class Registration extends Component {
 
     if (name.trim() === "") {
       return alert("Name field cannot be left empty");
-    } else if (email.trim() === "") {
-      return alert("Email field cannot be left empty");
-    } else if (mobile.trim() === "") {
-      return alert("Mobile field cannot be left empty");
-    } else if (password.trim() === "") {
-      return alert("Password field cannot be left empty");
-    } else if (aadharId.trim() === "") {
-      return alert("Aadhar Id field cannot be left empty");
-    } else {
-      sendCompanyRegistrationDetail(userData, history);
     }
+    if (email.trim() === "") {
+      return alert("Email field cannot be left empty");
+    }
+    if (mobile.trim() === "") {
+      return alert("Mobile field cannot be left empty");
+    }
+    if (password.trim() === "") {
+      return alert("Password field cannot be left empty");
+    }
+    if (aadharId.trim() === "") {
+      return alert("Aadhar Id field cannot be left empty");
+    }
+    sendCompanyRegistrationDetail(userData, history);
   };
 
   render() {
@@ -128,12 +131,12 @@ class Registration extends Component {
                   disabled
                 >
                   <span
-                    class="spinner-border"
+                    className="spinner-border"
                     role="status"
                     aria-hidden="true"
                     style={{ width: "1.5rem", height: "1.5rem" }}
-                  ></span>
-                  <span class="sr-only">Loading...</span>
+                  />
+                  <span className="sr-only">Loading...</span>
                 </button>
               )}
             </form>

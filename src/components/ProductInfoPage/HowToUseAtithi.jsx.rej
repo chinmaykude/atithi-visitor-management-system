@@ -1,0 +1,34 @@
+diff a/src/components/ProductInfoPage/HowToUseAtithi.jsx b/src/components/ProductInfoPage/HowToUseAtithi.jsx	(rejected hunks)
+@@ -4 +4 @@ import shieldImg from "../../components/images/Illustrations/Other/Verify.png";
+-import howItWorks from '../../components/images/Illustrations/Other/CheckInCheckOutMain.webp'
++import howItWorks from "../../components/images/Illustrations/Other/CheckInCheckOutMain.webp";
+@@ -11,4 +10 @@ export default function HowToUseAtithi() {
+-        <p
+-          id="features"
+-          style={{ fontSize: "40px", fontFamily: "herculanum" }}
+-        >
++        <p id="features" style={{ fontSize: "40px", fontFamily: "herculanum" }}>
+@@ -21 +17,4 @@ export default function HowToUseAtithi() {
+-              <ul className="list-unstyled" style={{ fontSize: "1.5rem", fontFamily: "Tomorrow" }}>
++              <ul
++                className="list-unstyled"
++                style={{ fontSize: "1.5rem", fontFamily: "Tomorrow" }}
++              >
+@@ -23 +22 @@ export default function HowToUseAtithi() {
+-                <li className="" >
++                <li className="">
+@@ -27,2 +26,3 @@ export default function HowToUseAtithi() {
+-                <li className="" >
+-                  Improve safety, security, and compliance for your visitors, contractors, staff, and assets.
++                <li className="">
++                  Improve safety, security, and compliance for your visitors,
++                  contractors, staff, and assets.
+@@ -31,2 +31,3 @@ export default function HowToUseAtithi() {
+-                <li className="" >
+-                  Geofence your site, check-in visitors, and receive instant notifications using Atithi app.
++                <li className="">
++                  Geofence your site, check-in visitors, and receive instant
++                  notifications using Atithi app.
+@@ -35 +36 @@ export default function HowToUseAtithi() {
+-                <li className="" >
++                <li className="">

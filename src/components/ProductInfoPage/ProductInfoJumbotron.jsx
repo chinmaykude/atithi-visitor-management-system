@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import illustration from "../../components/images/Illustrations/Onboarding/2.png";
+import illustration from "../images/Illustrations/Onboarding/2.png";
 
 export default function ProductInfoJumbotron() {
   return (

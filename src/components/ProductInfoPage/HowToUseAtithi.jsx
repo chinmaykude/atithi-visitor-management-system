@@ -1,7 +1,6 @@
 import React from "react";
-import cameraImg from "../../components/images/Illustrations/Other/Camera.png";
-import shieldImg from "../../components/images/Illustrations/Other/Verify.png";
-import howItWorks from "../../components/images/Illustrations/Other/CheckInCheckOutMain.webp";
+import cameraImg from "../images/Illustrations/Other/Camera.png";
+import howItWorks from "../images/Illustrations/Other/CheckInCheckOutMain.webp";
 
 export default function HowToUseAtithi() {
   return (
@@ -53,7 +52,7 @@ export default function HowToUseAtithi() {
         </p>
         <div className="row">
           <div className="col-12 m-auto" style={{ overflowX: "scroll" }}>
-            <img className="mb-5" src={howItWorks} alt="how it works image" />
+            <img className="mb-5" src={howItWorks} alt="how it works" />
           </div>
         </div>
       </div>
