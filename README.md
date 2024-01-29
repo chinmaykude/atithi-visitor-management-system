@@ -1,4 +1,6 @@
 # Atithi- Visitor Management System
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![HitCount](http://hits.dwyl.com/chinmaykude/chinmaykude/atithi-visitor-management-system.svg)](http://hits.dwyl.com/chinmaykude/chinmaykude/atithi-visitor-management-system)
 
 ## Smoothen your guest’s arrival through digitized check in.
 
