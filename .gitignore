@@ -26,3 +26,6 @@ yarn-error.log*
 /src/config
 .now
 .vercel
+
+# Allow tracking firebase config file while still ignoring the rest of the config folder
+!/src/config/fbaseConfig.js
