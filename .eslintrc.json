@@ -14,13 +14,44 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
+    "requireConfigFile": false,
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+
   "plugins": ["prettier"]
+  ,
+  "rules": {
+    "no-console": "off",
+    "no-alert": "off",
+    "react/prop-types": "off",
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/no-unknown-property": ["warn"],
+    "camelcase": "off",
+  "no-case-declarations": "off",
+  "no-unused-vars": "off",
+  "no-shadow": "off",
+  "consistent-return": "off",
+  "prefer-const": "off",
+  "react/self-closing-comp": "off",
+  "react/button-has-type": "off",
+  "jsx-a11y/click-events-have-key-events": "off",
+  "jsx-a11y/no-noninteractive-element-interactions": "off",
+  "jsx-a11y/anchor-is-valid": "off",
+  "react/destructuring-assignment": "off",
+  "react/no-unescaped-entities": "off",
+  "import/prefer-default-export": "off",
+  "no-use-before-define": "off",
+  "react/jsx-curly-brace-presence": "off",
+  "no-else-return": "off",
+  "react/no-unused-state": "off",
+  "react/no-unused-prop-types": "off",
+  "react/no-unused-vars": "off"
+  }
 }
