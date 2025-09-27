@@ -39,6 +39,7 @@ const reducer = (state = initState, { type, payload }) => {
       };
     case LOGIN_USER_REQUEST:
       return {
+        ...state,
         isLoading: true
       };
     case LOGIN_USER_SUCCESS:

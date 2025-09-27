@@ -148,17 +148,20 @@ class VisitorRegistration extends Component {
 }
 
 VisitorRegistration.defaultProps = {
-  history: propTypes.object,
-  addVisitor1: propTypes.func
+  history: {},
+  addVisitor: () => {}
 };
 
 VisitorRegistration.propTypes = {
-  history: propTypes.object,
-  addVisitor1: propTypes.func
+  history: propTypes.object.isRequired,
+  addVisitor: propTypes.func.isRequired,
+  isAddVisitorLoading: propTypes.bool.isRequired,
+  isAuth: propTypes.bool.isRequired
 };
 
 const mapStateToProps = state => ({
-  isAddVisitorLoading: state.visitorReducer.isAddVisitorLoading
+  isAddVisitorLoading: state.visitorReducer.isAddVisitorLoading,
+  isAuth: state.authReducer.isAuth
 });
 
 const mapDispatchToProps = dispatch => {

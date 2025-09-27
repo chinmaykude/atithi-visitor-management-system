@@ -11,6 +11,7 @@ import {
 } from "./actionTypes";
 import axios from "../../utils/axiosInterceptor";
 import firebase from "../../config/fbaseConfig";
+import logger from "../../utils/logger";
 
 export const loginUserRequest = () => ({
   type: LOGIN_USER_REQUEST
@@ -29,7 +30,7 @@ export const loginUserFailure = payload => ({
 export const loginUser = ({ email, password, history }) => dispatch => {
   dispatch(loginUserRequest());
 
-  console.log("history", email, password, history);
+  logger.log("history", email, password, history);
   return firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
@@ -37,7 +38,7 @@ export const loginUser = ({ email, password, history }) => dispatch => {
       return data.user.getIdToken();
     })
     .then(token => {
-      console.log("token", token);
+      logger.log("token", token);
       dispatch(loginUserSuccess(token));
       setAuthorizationHeader(token);
       history.push("/main_checkin_checkout");
@@ -46,7 +47,7 @@ export const loginUser = ({ email, password, history }) => dispatch => {
       // Handle Errors
       const errorCode = error.code;
       let errorMessage = "Something went wrong. Please try again.";
-      if (errorCode === "auth/wrong-password" || "auth/invalid-email") {
+      if (errorCode === "auth/wrong-password" || errorCode === "auth/invalid-email") {
         errorMessage = "Please check the entered credentials.";
         alert(errorMessage);
       } else if (errorCode === "auth/user-not-found") {

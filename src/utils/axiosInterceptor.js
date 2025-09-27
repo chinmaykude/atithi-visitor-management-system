@@ -1,5 +1,5 @@
-/* eslint-disable no-console */
 import axios from "axios";
+import logger from "./logger";
 
 let interceptorEnabled = false;
 
@@ -13,7 +13,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(request => {
   if (interceptorEnabled) {
-    console.log(`Request: ${request.method} ${request.baseURL}${request.url}`);
+    logger.log(`Request: ${request.method} ${request.baseURL}${request.url}`);
   }
   return request;
 });
@@ -21,14 +21,14 @@ axiosInstance.interceptors.request.use(request => {
 axiosInstance.interceptors.response.use(
   response => {
     if (interceptorEnabled) {
-      console.log("Response Status: ", response.status);
-      console.log("Response Summary: ", response.data.summary);
-      console.log("Response Content: ", response.data.data);
+      logger.log("Response Status: ", response.status);
+      logger.log("Response Summary: ", response.data.summary);
+      logger.log("Response Content: ", response.data.data);
     }
     return response;
   },
   error => {
-    console.log("Error", error);
+    logger.error("Error", error);
     return error;
   }
 );
