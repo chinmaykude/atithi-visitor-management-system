@@ -46,7 +46,7 @@ export const loginUser = ({ email, password, history }) => dispatch => {
       // Handle Errors
       const errorCode = error.code;
       let errorMessage = "Something went wrong. Please try again.";
-      if (errorCode === "auth/wrong-password" || "auth/invalid-email") {
+      if (errorCode === "auth/wrong-password" || errorCode === "auth/invalid-email") {
         errorMessage = "Please check the entered credentials.";
         alert(errorMessage);
       } else if (errorCode === "auth/user-not-found") {

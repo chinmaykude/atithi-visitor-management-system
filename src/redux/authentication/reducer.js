@@ -39,34 +39,44 @@ const reducer = (state = initState, { type, payload }) => {
       };
     case LOGIN_USER_REQUEST:
       return {
-        isLoading: true
+        ...state,
+        isLoading: true,
+        error: ""
       };
     case LOGIN_USER_SUCCESS:
       return {
+        ...state,
         isLoading: false,
-        isAuth: true
+        isAuth: true,
+        error: ""
       };
     case LOGIN_USER_FAILURE:
       return {
+        ...state,
         isLoading: false,
         error: payload
       };
     case SET_AUTHENTICATION:
       return {
+        ...state,
         isLoading: false,
         isAuth: true
       };
     case LOGOUT_USER_REQUEST:
       return {
-        isLoading: false,
-        error: ""
+        ...state,
+        isLoading: true
       };
     case LOGOUT_USER_SUCCESS:
       return {
-        isAuth: false
+        ...state,
+        isAuth: false,
+        isLoading: false,
+        error: ""
       };
     case LOGOUT_USER_FAILURE:
       return {
+        ...state,
         isLoading: false,
         error: "Failed to logout"
       };
