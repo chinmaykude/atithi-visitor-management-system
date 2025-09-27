@@ -29,7 +29,7 @@ axiosInstance.interceptors.response.use(
   },
   error => {
     console.log("Error", error);
-    return error;
+    return Promise.reject(error);
   }
 );
 

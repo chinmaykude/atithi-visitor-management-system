@@ -24,11 +24,14 @@ const reducer = (state = initState, { type, payload }) => {
     case REGISTER_COMPANY_REQUEST:
       return {
         ...state,
-        isLoading: true
+        isLoading: true,
+        error: ""
       };
     case REGISTER_COMPANY_SUCCESS:
       return {
         ...state,
+        isLoading: false,
+        error: "",
         companyUserDetails: [...state.companyUserDetails, payload]
       };
     case REGISTER_COMPANY_FAILURE:
@@ -39,34 +42,47 @@ const reducer = (state = initState, { type, payload }) => {
       };
     case LOGIN_USER_REQUEST:
       return {
-        isLoading: true
+        ...state,
+        isLoading: true,
+        error: ""
       };
     case LOGIN_USER_SUCCESS:
       return {
+        ...state,
         isLoading: false,
-        isAuth: true
+        isAuth: true,
+        error: ""
       };
     case LOGIN_USER_FAILURE:
       return {
+        ...state,
         isLoading: false,
+        isAuth: false,
         error: payload
       };
     case SET_AUTHENTICATION:
       return {
+        ...state,
         isLoading: false,
-        isAuth: true
+        isAuth: true,
+        error: ""
       };
     case LOGOUT_USER_REQUEST:
       return {
-        isLoading: false,
+        ...state,
+        isLoading: true,
         error: ""
       };
     case LOGOUT_USER_SUCCESS:
       return {
-        isAuth: false
+        ...state,
+        isLoading: false,
+        isAuth: false,
+        error: ""
       };
     case LOGOUT_USER_FAILURE:
       return {
+        ...state,
         isLoading: false,
         error: "Failed to logout"
       };

@@ -1,14 +1,19 @@
 import axios from "axios";
 
+const ELASTICEMAIL_API_KEY = process.env.REACT_APP_ELASTICEMAIL_API_KEY;
+
 export function sendVisitIdToVisitor(email, visitorName, visitID) {
+  if (!ELASTICEMAIL_API_KEY) {
+    console.warn("Elastic Email API key is not configured.");
+    return;
+  }
   axios({
     method: "post",
     url: "https://api.elasticemail.com/v2/email/send",
     params: {
       from: "cvkude@gmail.com",
       fromName: "Atithi - Visitor Management System",
-      apikey:
-        "3A0BA01D0D2004AD729F875FF6B1723059E8A3810E91F8A5DE947557E073EAB34467E8B04C3807D9F55055FEDA2ED65B",
+      apikey: ELASTICEMAIL_API_KEY,
       subject: "Visit ID for your latest Visit",
       to: email,
       bodyHtml: `
@@ -27,14 +32,17 @@ export function sendVisitIdToVisitor(email, visitorName, visitID) {
 }
 
 export function sendEmailToVisitee(visitorName, whomToMeetEmail, whomToMeet) {
+  if (!ELASTICEMAIL_API_KEY) {
+    console.warn("Elastic Email API key is not configured.");
+    return;
+  }
   axios({
     method: "post",
     url: "https://api.elasticemail.com/v2/email/send",
     params: {
       from: "cvkude@gmail.com",
       fromName: "Atithi - Visitor Management System",
-      apikey:
-        "3A0BA01D0D2004AD729F875FF6B1723059E8A3810E91F8A5DE947557E073EAB34467E8B04C3807D9F55055FEDA2ED65B",
+      apikey: ELASTICEMAIL_API_KEY,
       subject: `${visitorName} is here to meet you..!!`,
       to: whomToMeetEmail,
       bodyHtml: `
