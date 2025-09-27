@@ -5,12 +5,13 @@ import Routes from "./routes/Routes";
 import NavbarPublic from "./components/NavbarPublic";
 import store from "./redux/store";
 import { logoutUser, loginUserSuccess } from "./redux/authentication/actions";
+import logger from "./utils/logger";
 
 const token = localStorage.FBIdToken;
 
 if (token) {
   const decodedToken = jwtDecode(token);
-  console.log(`decodedToken`, decodedToken.exp);
+  logger.log(`decodedToken`, decodedToken.exp);
   if (decodedToken.exp * 1000 < Date.now()) {
     window.location.href = "/login";
     store.dispatch(logoutUser());
